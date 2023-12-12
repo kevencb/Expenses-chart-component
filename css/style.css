@@ -13,6 +13,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  gap: 32px;
 }
 
 .main {
@@ -95,10 +96,8 @@ body {
 }
 
 footer {
-  background-color: aqua;
   font-size: 10px;
   text-align: center;
-  margin: 24px auto;
 }
 footer a {
   color: #76B5BC;
