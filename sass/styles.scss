@@ -53,7 +53,8 @@ body{
         .chart__content{
             display: flex;
             justify-content: space-between;
-            gap: 14px;
+            gap: 0px;
+            // align-items: flex-end;
             .chart{
                 display: flex;
                 justify-content: space-between;
@@ -61,11 +62,32 @@ body{
                 align-items: center;
                 gap: 6px;
                 margin-bottom: 24px;
+                position: relative;
                 &__column{
-                    width: 36px;
-                    height: 60px;
+                    width: 32px;
+                    height: 150px;
                     background-color: variables.$orange;
                     border-radius: 4px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    cursor: pointer;
+                    @media (min-width: 720px) {
+                        width: 42px;
+                    }
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+                &__worth{
+                    background-color: variables.$brown;
+                    padding: 8px;
+                    color: variables.$cream;
+                    font-size: 12px;
+                    border-radius: 6px;
+                    position: absolute;
+                    margin-top: -40px;
+                    display: none;
                 }
                 &__day{
                     font-size: 12px;

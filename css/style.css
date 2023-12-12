@@ -52,7 +52,7 @@ body {
 .main .info .chart__content {
   display: flex;
   justify-content: space-between;
-  gap: 14px;
+  gap: 0px;
 }
 .main .info .chart__content .chart {
   display: flex;
@@ -61,12 +61,35 @@ body {
   align-items: center;
   gap: 6px;
   margin-bottom: 24px;
+  position: relative;
 }
 .main .info .chart__content .chart__column {
-  width: 36px;
-  height: 60px;
+  width: 32px;
+  height: 150px;
   background-color: #EC755D;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+}
+@media (min-width: 720px) {
+  .main .info .chart__content .chart__column {
+    width: 42px;
+  }
+}
+.main .info .chart__content .chart__column:hover {
+  opacity: 0.8;
+}
+.main .info .chart__content .chart__worth {
+  background-color: #372515;
+  padding: 8px;
+  color: #FFFCF7;
+  font-size: 12px;
+  border-radius: 6px;
+  position: absolute;
+  margin-top: -40px;
+  display: none;
 }
 .main .info .chart__content .chart__day {
   font-size: 12px;
