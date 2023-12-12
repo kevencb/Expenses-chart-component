@@ -49,7 +49,12 @@ body {
 .main .info__title {
   margin-bottom: 60px;
 }
-.main .info__content .bar {
+.main .info .chart__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+.main .info .chart__content .chart {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -57,13 +62,13 @@ body {
   gap: 6px;
   margin-bottom: 24px;
 }
-.main .info__content .bar__column {
-  width: 44px;
+.main .info .chart__content .chart__column {
+  width: 36px;
   height: 60px;
   background-color: #EC755D;
   border-radius: 4px;
 }
-.main .info__content .bar__day {
+.main .info .chart__content .chart__day {
   font-size: 12px;
   text-align: center;
 }

@@ -50,8 +50,11 @@ body{
         &__title{
             margin-bottom: 60px;
         }
-        &__content{
-            .bar{
+        .chart__content{
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            .chart{
                 display: flex;
                 justify-content: space-between;
                 flex-direction: column;
@@ -59,7 +62,7 @@ body{
                 gap: 6px;
                 margin-bottom: 24px;
                 &__column{
-                    width: 44px;
+                    width: 36px;
                     height: 60px;
                     background-color: variables.$orange;
                     border-radius: 4px;
