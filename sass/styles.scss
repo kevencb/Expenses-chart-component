@@ -12,13 +12,13 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
 } 
 
 .main{
     width: 90%;
     max-width: 450px;
-    margin: auto;
     .balance{
         height: 98px;
         display: flex;
@@ -100,7 +100,8 @@ body{
 }
 
 footer{
-    font-size: 12px;
+    background-color: aqua;
+    font-size: 10px;
     text-align: center;
     margin: 24px auto;
     a{
