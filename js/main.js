@@ -18,16 +18,14 @@ let values = [] //Almacena los valores de data: amount
 data.forEach(element => {
     values.push(element.amount)
     chartContent.innerHTML += `
-    <div class="chart">    
-    <div class="chart__column">
+    <div class="chart">
         <p class="chart__worth">$${element.amount}</p>
-    </div>
-    <p class="chart__day">${element.day}</p>
+        <p class="chart__day">${element.day}</p>
     </div>
     `
 });
 
-let maxHeight = 200;
+let maxHeight = 150;
 let maxValue = Math.max(...values)
 
 let charts = document.querySelectorAll('.chart')
@@ -35,7 +33,7 @@ charts = [...charts]
 
 charts.forEach(bar => {
     
-    let newValor = parseFloat(bar.childNodes[1].childNodes[1].innerText.slice(1))
+    let newValor = parseFloat(bar.childNodes[1].innerText.slice(1))
     
     let actualHeight = (newValor * maxHeight) / maxValue
 
@@ -47,11 +45,15 @@ charts.forEach(bar => {
     }
 
     bar.addEventListener('mouseover', e => {
-        let worth = e.target.childNodes[1]
-        worth.style.display = 'block'
+        if(e.target.className == 'chart'){
+            let worth = e.target.childNodes[1]
+            worth.style.display = 'block'
+        }
     })
     bar.addEventListener('mouseout', e => {
-        let worth = e.target.childNodes[1]
-        worth.style.display = 'none'
+        if(e.target.className == 'chart'){
+            let worth = e.target.childNodes[1]
+            worth.style.display = 'none'
+        }
     })
 })

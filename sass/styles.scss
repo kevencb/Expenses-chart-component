@@ -53,31 +53,23 @@ body{
         .chart__content{
             display: flex;
             justify-content: space-between;
+            align-items: flex-end;
             gap: 0px;
-            // align-items: flex-end;
             .chart{
+                width: 32px;
+                height: 150px;
+                background-color: variables.$orange;
+                cursor: pointer;
                 display: flex;
-                justify-content: space-between;
-                flex-direction: column;
-                align-items: center;
-                gap: 6px;
-                margin-bottom: 24px;
+                justify-content: center;
+                margin-bottom: 42px;
                 position: relative;
-                &__column{
-                    width: 32px;
-                    height: 150px;
-                    background-color: variables.$orange;
-                    border-radius: 4px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-end;
-                    cursor: pointer;
-                    @media (min-width: 720px) {
-                        width: 42px;
-                    }
-                    &:hover{
-                        opacity: 0.8;
-                    }
+                border-radius: 4px;
+                @media (min-width: 720px) {
+                    width: 42px;
+                }
+                &:hover{
+                    opacity: 0.8;
                 }
                 &__worth{
                     background-color: variables.$brown;
@@ -92,6 +84,9 @@ body{
                 &__day{
                     font-size: 12px;
                     text-align: center;
+                    position: absolute;
+                    bottom: -24px;
+                }
                 }
             }
         }
@@ -123,7 +118,7 @@ body{
             }
         }
     }
-}
+
 
 footer{
     font-size: 10px;
